@@ -26,7 +26,7 @@
   (1))
 
 (defn check-files
-  ""
+  "Reporter is used to deal with the output as it arises."
   [files reporter]
   (doseq [file (filter #(and (.isFile %)
                              (.endsWith (.getPath %) "clj"))
