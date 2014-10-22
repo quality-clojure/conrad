@@ -1,20 +1,31 @@
 (ns conrad.core
   (:require [taoensso.timbre :as timbre :refer [info spy]]
             [clojure.java.io :as io]
-            [clojure.core.async :as async :refer :all])
+            [clojure.core.async :as async])
   (:import java.io.File))
 
-;; All should return something like a vector of maps containing
-;; :file, :line, :content that the reporter will use to do various things.
+(defn has-trailing-whitespace?
+  "True if the line has a whitespace before a newline. False otherwise."
+  [line]
+  (not (nil? (re-find #"\ $" line))))
+
+(defn has-long-line?
+  "True if the line exceeds the passed in length. False otherwise."
+  [line]
+  (not (nil? (re-find #"^.{80,}" line))))
+
 (defn long-lines
-  ""
-  [file max-line-length]
-  (1))
+  "Given a file, returns a vector of lines deemed too long."
+  [file max-line-width]
+  (with-open [reader (io/reader file)]
+    (filterv has-long-line? (line-seq reader))))
 
 (defn trailing-whitespace
-  ""
+  "Given a file, returns a vector of lines with a whitespace character
+  at the end of the line."
   [file]
-  (1))
+  (with-open [reader (io/reader file)]
+    (filterv has-trailing-whitespace? (line-seq reader))))
 
 (defn missing-doc-string
   ""
