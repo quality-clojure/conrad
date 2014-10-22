@@ -1,6 +1,7 @@
 (ns conrad.core
   (:require [taoensso.timbre :as timbre :refer [info spy]]
-            [clojure.java.io :as io])
+            [clojure.java.io :as io]
+            [clojure.core.async :as async :refer :all])
   (:import java.io.File))
 
 ;; All should return something like a vector of maps containing
