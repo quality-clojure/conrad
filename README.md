@@ -12,9 +12,13 @@ Conrad is a simple linting library to keep code civilized.
 
 The general idea is to be able to programmatically check arbitrary code according to some arbitrary standards (or your own standards, which may be just as arbitrary).
 
+Communication to and from the library is expected to occur via [core.async].
+
 ## License
 
 Copyright © 2014 Chris Sims and Scott Bauer
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
+
+[core.async]: (https://github.com/clojure/core.async)
