@@ -54,7 +54,7 @@
                              (.endsWith (.getPath %) "clj"))
                        (file-seq files))]
     (info (.getPath file))
-    (load-ns file)
+    ;(load-ns file)
     ;   (long-lines file 80)
     ;  (trailing-whitespace)
     ; (missing-doc-string?)
