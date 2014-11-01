@@ -21,4 +21,4 @@ Copyright © 2014 Chris Sims and Scott Bauer
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
 
-[core.async]: (https://github.com/clojure/core.async)
+[core.async]: https://github.com/clojure/core.async
