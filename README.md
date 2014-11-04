@@ -14,6 +14,12 @@ The general idea is to be able to programmatically check arbitrary code accordin
 
 Communication to and from the library is expected to occur via [core.async].
 
+## Known Future Plans
+
+Perhaps you find our hodgepodge list of checks lacking? If so then we have good news! You should* able to provide your own predicate that runs over a namespace for a given granularity. This allows you to easily extend Conrad to suit your needs.
+
+* Hopefully... someday... if you are lucky.
+
 ## License
 
 Copyright © 2014 Chris Sims and Scott Bauer
