@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/quality-clojure/conrad.png?label=ready&title=Ready)](https://waffle.io/quality-clojure/conrad)
 # Conrad
 
 > "The horror! The horror!"
