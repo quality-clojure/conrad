@@ -1,4 +1,4 @@
-(defproject conrad "0.1.0-SNAPSHOT"
+(defproject conrad "0.1.0"
   :description "Don't let your code run wild."
   :url "https://github.com/quality-clojure/conrad"
   :license {:name "Eclipse Public License"
