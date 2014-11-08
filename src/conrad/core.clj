@@ -66,7 +66,7 @@
         (doseq [[line-num line] line-pairs]
           (long-lines line line-num filename ch)
           (trailing-whitespace line line-num filename ch)))))
-  (go (>! :done ch)))
+  (go (>! ch :done)))
 
 ;; (defn check-files
 ;;   ""
