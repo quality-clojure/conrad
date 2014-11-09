@@ -5,7 +5,8 @@
             [taoensso.timbre :as timbre :refer [info spy]]))
 
 (defn doc-string
-  "Given a form, such as a function, attempt to retrieve the documentation. Nil otherwise."
+  "Given a form, such as a function, attempt to retrieve the
+  documentation. Nil otherwise."
   [form]
   (get-in (ana.jvm/analyze' 'form) [:meta :doc]))
 
